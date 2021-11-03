@@ -20,7 +20,7 @@
 			$.getJSON("https://rule34-json-api.herokuapp.com/p/")
 			.done(function(data) {
 				$.each(data, function(i, item) {
-					$("<img>")
+					$("<img><br />")
 					.attr("src", item.preview_url)
 					.appendTo("#images");
 				});
