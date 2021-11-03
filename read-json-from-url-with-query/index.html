@@ -17,11 +17,11 @@
 
 	<script>
 		(function() {
-			$.getJSON("https://api.jsonbin.io/b/6181d562aa02be1d4462db52")
+			$.getJSON("https://rule34-json-api.herokuapp.com/p/")
 			.done(function(data) {
 				$.each(data, function(i, item) {
 					$("<img>")
-					.attr("src", item.img)
+					.attr("src", item.preview_url)
 					.appendTo("#images");
 				});
 			});
