@@ -21,7 +21,7 @@
 			.done(function(data) {
 				$.each(data, function(i, item) {
 					$("<img>")
-					.attr("src", "https://cdn.atv2.net/img/" + item.img)
+					.attr("src", item.img)
 					.appendTo("#images");
 				});
 			});
