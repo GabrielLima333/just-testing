@@ -19,7 +19,7 @@
 
 	<script>
 		(function() {
-			document.getElementById("loading").style.display = "none";
+			document.getElementById("loading").style.display = "block";
 			$.getJSON("https://rule34-json-api.herokuapp.com/p/")
 			.done(function(data) {
 				$.each(data, function(i, item) {
@@ -27,7 +27,7 @@
 					.attr("src", item.preview_url)
 					.appendTo("#images");
 				});
-				document.getElementById("loading").style.display = "block";
+				document.getElementById("loading").style.display = "none";
 			});
 		})();
 	</script>
