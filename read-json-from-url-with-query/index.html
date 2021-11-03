@@ -15,7 +15,7 @@
 
 	<h1>Imagens NSFW</h1>
 	<p id="loading">Carregando...</p>
-	<div id="images"></div>
+	<div style="display: none;" id="images"></div>
 
 	<script>
 		(function() {
@@ -26,6 +26,7 @@
 					.attr("src", item.preview_url)
 					.appendTo("#images");
 				});
+				
 			});
 		})();
 	</script>
