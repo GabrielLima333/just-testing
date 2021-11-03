@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Read json from url with query | Mokusei Experiences</title>
+	<style>
+		img {
+			height: 100px;
+			float: left;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+	<div id="images"></div>
+
+	<script>
+		(function() {
+			$.getJSON("https://api.jsonbin.io/b/6181d34b9548541c29cc931e")
+			.done(function(data) {
+				$.each(data, function(i, item) {
+					$("<img>")
+					.attr("src", "https://cdn.atv2.net/img/" + item.img)
+					.appendTo("#images");
+				});
+			});
+		})();
+	</script>
+</body>
+</html>
